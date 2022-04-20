@@ -4,65 +4,85 @@
   font-weight: normal;
 }
 
-body {
+body{
   padding: 0;
   margin: 0;
-  background-image: url(img/cloud.jpg);
+  background-image: url("img/cloud.jpg");
   background-size: cover;
   background-repeat: repeat-y;
+  height: 650px;
 }
 
-.calculator-grid {
-  display: grid;
+.calculator-grid{
+  display: flexbox;
   justify-content: center;
   align-content: center;
-  min-height: 100vh;
+  min-height: fit-content;
+  max-width: fit-content;
+  margin: 9.5vh auto;
   grid-template-columns: repeat(4, 100px);
-  grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+  grid-template-rows: minmax(120px, auto) repeat(5, 80px);
   background-color: rgba(0,0,0,0.4);
   border: 5px outset #c2c3c7;
-  border-radius: 15px;
-  box-shadow: 0 0 15px;
 }
 
-.calculator-grid > button {
+.calculator-grid > button{
+  width: 50px;
+  height: 50px;
   cursor: pointer;
   font-size: 2rem;
-  border: 1px outset white;
+  color: #607d8b;
+  border: 5px outset #c2c3c7;
   outline: none;
-  background-color: #607d8b(255, 255, 255, .75);
-  border-radius: 25px;
   margin: 1.5vh;
+  border-radius: 25px;
 }
 
-.calculator-grid > button:hover {
-  background:lightgreen;
-  color:#607d8b;
+.number{
+  background-color: teal;
 }
 
-.span-two {
+.operation {
+  background-color: lightgreen;
+}
+
+.equal{
+  background-color: lightgreen;
+}
+
+.del{
+  background-color: teal;
+}
+
+.calculator-grid > button:hover{
+  background-color: #607d8b;
+}
+
+.span-two{
   grid-column: span 2;
 }
 
-.output {
+.output{
   grid-column: 1 / -1;
-  background-color: rgb(255, 255, 255);
+  background-color: url("img/beige.jpg");
   display: flex;
   align-items: flex-end;
   justify-content: space-around;
   flex-direction: column;
   padding: 10px;
+  margin: 4px;
   word-wrap: break-word;
   word-break: break-all;
-  border-radius: 25px;
+  width: 210px;
+  border: none;
 }
 
-.output .previous-operand {
-  color:  #607d8b(0,0, 0, .75);
+.output .previous-operand{
+  color: teal;
   font-size: 1.5rem;
 }
 
-.output .current-operand {
-  color: black;
+.output .current-operand{
+  color: teal;
   font-size: 2.5rem;
 }
