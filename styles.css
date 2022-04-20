@@ -5,7 +5,7 @@
   }
   
   body {
-    background: whitesmoke;
+    background: img src;
 	height: 637px;
   }
   
@@ -19,6 +19,11 @@
 	padding: 25px;
 	border-radius: 15px;
 	box-shadow: 0 0 15px;
+ 	justify-content: center;
+    	align-content: center;
+    	min-height: 100vh;
+	grid-template-columns: repeat(4, 100px);
+    	grid-template-rows: minmax(120px, auto) repeat(5, 100px);
   }
   
   .calculator-grid > button {
@@ -28,7 +33,7 @@
 	margin: 2px;
 	cursor: pointer;
 	border: none;
-	background: #607d8b;
+	background: #607d8b (255, 255, 255, .75);
 	color: white;
 	border-radius: 25px;
   }
@@ -38,6 +43,10 @@
 	color:#607d8b;
   }
   
+  .span-two {
+    grid-column: span 2;
+  }
+
   .output {
     width: 204px;
 	margin: 4px;
