@@ -7,13 +7,11 @@
   body {
     padding: 0;
     margin: 0;
-    background-image: url("img/cloud.jpg");
-    background-size: cover;
-    background-repeat: repeat-y;
+    background: whitesmoke
   }
   
   .calculator-grid {
-    display: grid;
+    display: flex;
     justify-content: center;
     align-content: center;
     min-height: 100vh;
@@ -26,11 +24,11 @@
     font-size: 2rem;
     border: 1px solid teal;
     outline: none;
-    background-color: rgba(255, 255, 255, .75);
+    background-color: #607d8b(255, 255, 255, .75);
   }
   
   .calculator-grid > button:hover {
-    background-color: rgba(255, 255, 255, .9);
+    background-color: #607d8b;
   }
   
   .span-two {
@@ -39,7 +37,7 @@
   
   .output {
     grid-column: 1 / -1;
-    background-image: url("img/beige.jpg");
+    background-color: khaki;
     display: flex;
     align-items: flex-end;
     justify-content: space-around;
@@ -55,6 +53,6 @@
   }
   
   .output .current-operand {
-    color: teal;
+    color: black;
     font-size: 2.5rem;
   }
